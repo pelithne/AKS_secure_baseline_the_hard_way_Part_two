@@ -1,9 +1,8 @@
-# AKS_secure_baseline_the_hard_way_part_two
-
 ## Workload Protection
 
+The objective of this blog is to provide a concise guide on how to increase the security of your Kubernetes workloads by implementing "Workload Identity" and network policy in AKS. These features enable secure access to Azure KeyVault and control traffic flow between pods, providing an additional layer of security for your AKS cluster. Finally, as the icing on the cake, there are instructions on how to use Defender for Containers to detect vulnerabilities in container images.
 
-The objective of this blog is to provide a concise guide on how to implement workload identity and network policy in AKS. These features enable secure access to Azure KeyVault and control traffic flow between pods, providing an additional layer of security for your AKS cluster. By following the steps in this chapter, you will learn how to configure workload identity, network policy in AKS and Azure KeyVault.
+By following the steps in this guide, you will learn how to configure workload identity, network policy in AKS and Azure KeyVault.
 
 
 ## 1.1 Deployment
