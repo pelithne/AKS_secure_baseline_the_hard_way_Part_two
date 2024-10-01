@@ -3,7 +3,7 @@
 ## Workload Protection
 
 
-The objective of this chapter is to provide a concise guide on how to implement workload identity and network policy in AKS. These features enable secure access to Azure KeyVault and control traffic flow between pods, providing an additional layer of security for your AKS cluster. By following the steps in this chapter, you will learn how to configure workload identity, network policy in AKS and Azure KeyVault.
+The objective of this blog is to provide a concise guide on how to implement workload identity and network policy in AKS. These features enable secure access to Azure KeyVault and control traffic flow between pods, providing an additional layer of security for your AKS cluster. By following the steps in this chapter, you will learn how to configure workload identity, network policy in AKS and Azure KeyVault.
 
 
 ## 1.1 Deployment
