@@ -5,9 +5,9 @@ The objective of this blog is to provide a concise guide on how to increase the 
 By following the steps in this guide, you will learn how to configure workload identity, network policy in AKS and Azure KeyVault.
 
 ## Preconditions
-This post build on a previous blog, https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-kubernetes-service-baseline-the-hard-way/ba-p/4130496. The instructions there will equip you with a private AKS cluster and a lot of surrounding services, like Azure Container Reqistry, Application Gateway with WAF, etc. If you have completed the instructions there, you can simply continue with this guide.
+This post build on a previous blog, https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-kubernetes-service-baseline-the-hard-way/ba-p/4130496. The instructions there will equip you with a private AKS cluster and a lot of surrounding services, like Azure Container Reqistry, Application Gateway with WAF, etc. If you have completed the instructions there, you can simply continue with this guide. 
 
-Alternatively, you can set up a more basic AKS cluster using step 1-3 in this guide: https://learn.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app?tabs=azure-cli
+You could also create a more simple AKS cluster, using Microsoft quickstart guides here: https://learn.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app?tabs=azure-cli. However, if you do you will have to take care to populate some environment varlibles to match the instructions below, like e.g. AKS_CLUSTER_NAME and STUDENT_NAME.
 
 
 ## 1.1 Deployment
