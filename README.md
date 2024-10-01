@@ -1,1 +1,1 @@
-# AKS_secure_baseline_the_hard_way_Part_two
+# AKS_secure_baseline_the_hard_way_part_two
