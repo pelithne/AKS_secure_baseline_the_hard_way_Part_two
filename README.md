@@ -7,7 +7,7 @@ By following the steps in this guide, you will learn how to configure workload i
 ## Preconditions
 This post build on a previous blog, https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-kubernetes-service-baseline-the-hard-way/ba-p/4130496. The instructions there will equip you with a private AKS cluster and a lot of surrounding services, like Azure Container Reqistry, Application Gateway with WAF, etc. If you have completed the instructions there, you can simply continue with this guide. 
 
-You could also create a more simple AKS cluster, using Microsoft quickstart guides here: https://learn.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app?tabs=azure-cli. However, if you do you will have to take care to populate some environment varlibles to match the instructions below, like e.g. AKS_CLUSTER_NAME and STUDENT_NAME.
+You could also create a more simple AKS cluster, using Microsoft quickstart guides here: https://learn.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app?tabs=azure-cli. However, if you do you will have to take care to populate some environment variables to match the instructions below, like e.g. AKS_CLUSTER_NAME and STUDENT_NAME.
 
 
 ## 1.1 Deployment
@@ -586,19 +586,9 @@ This time, communication from azure-vote-front to azure-vote-back is allowed.
 
 
 
-# Defender for Containers
+## 1.2 Defender for Containers
 
-**In This Article:**
-
-- [Defender for Containers](#defender-for-containers)
-  - [1.1 Introduction](#11-introduction)
-  - [1.2 Prerequisites](#12-prerequisites)
-  - [1.3 Generate a Security Alert for Kubernetes Workload](#13-generate-a-security-alert-for-kubernetes-workload)
-  - [1.4 Import Vulnerable image to Container Registry](#14-import-vulnerable-image-to-container-registry)
-  - [1.5 Review Microsoft Defender for Containers Recommendations](#15-review-microsoft-defender-for-containers-recommendations)
-
-
-## 1.1 Introduction
+Finally lets add Defender for Containers to your deployment to harden your environment even further. 
 
 Microsoft Defender for Containers is a cloud-native solution that helps you secure your containers and their applications. It protects your Kubernetes clusters from misconfigurations, vulnerabilities, and threats, whether they are running on Azure, AWS, GCP, or on-premises. With Microsoft Defender for Containers, you can:
 
@@ -618,7 +608,7 @@ During this activity you will:
 
 Import the metasploit vulnerability emulator docker image from Docker Hub to your Azure container registry.
 
-## 1.2 Prerequisites
+### 1.2.1 Prerequisites
 
 Update the firewall to allow AKS to pull images from docker hub.
 
@@ -673,7 +663,7 @@ azureuser@Jumpbox-VM:~$
 
 
 
-## 1.3 Generate a Security Alert for Kubernetes Workload
+### 1.2.2 Generate a Security Alert for Kubernetes Workload
 
 
 Login to the jumpbox and launch a pod that executes a test command, to simulate a security alert in Microsoft Defender for cloud.
@@ -769,7 +759,7 @@ Verify that Microsoft defender has triggered a security alert in Microsoft Defen
 kubectl delete pods mdc-test
 ````
 
-## 1.4 Import Vulnerable image to Container Registry
+### 1.2.3 Import Vulnerable image to Container Registry
 
 login to your container registry:
 
@@ -795,7 +785,7 @@ Push the vulnerable docker image to azure container registry.
 docker push $ACR_NAME.azurecr.io/metasploit-vulnerability-emulator
 ````
 
-## 1.5 Review Microsoft Defender for Containers Recommendations
+### 1.2.4 Review Microsoft Defender for Containers Recommendations
 
  In this section, you will learn how to review the security recommendations that Defender for Containers generates for your clusters and containers. These recommendations are based on the continuous assessment of your configurations and the comparison with the initiatives applied to your subscriptions. You will also learn how to investigate and remediate the issues that are identified by Defender for Containers.
 
