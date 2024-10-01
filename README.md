@@ -1,24 +1,6 @@
 # AKS_secure_baseline_the_hard_way_part_two
 
-# Workload Protection
-
-**In This Article:**
-
-- [Workload Protection](#workload-protection)
-  - [1.1 Deployment](#11-deployment)
-    - [1.1.1 Prepare Environment Variables for Infrastructure](#111-prepare-environment-variables-for-infrastructure)
-    - [1.1.2 Update AKS Cluster with OIDC Issuer](#112-update-aks-cluster-with-oidc-issuer)
-    - [1.1.3 Create Azure KeyVault](#113-create-azure-keyvault)
-    - [1.1.4 Add a Secret to Azure KeyVault](#114-add-a-secret-to-azure-keyvault)
-    - [1.1.5 Add the KeyVault URL to the Environment Variable *KEYVAULT\_URL*](#115-add-the-keyvault-url-to-the-environment-variable-keyvault_url)
-    - [1.1.6 Create a managed identity and grant permissions to access the secret](#116-create-a-managed-identity-and-grant-permissions-to-access-the-secret)
-    - [1.1.7 Connect to the Cluster](#117-connect-to-the-cluster)
-    - [1.1.8 Create Service Account](#118-create-service-account)
-    - [1.1.9 Establish Federated Identity Credential](#119-establish-federated-identity-credential)
-    - [1.1.10 Build the Application](#1110-build-the-application)
-    - [1.1.11 Deploy the Application](#1111-deploy-the-application)
-    - [1.1.12 Validate the Application](#1112-validate-the-application)
-    - [1.1.13 Workload Network Policy](#1113-workload-network-policy)
+## Workload Protection
 
 
 The objective of this chapter is to provide a concise guide on how to implement workload identity and network policy in AKS. These features enable secure access to Azure KeyVault and control traffic flow between pods, providing an additional layer of security for your AKS cluster. By following the steps in this chapter, you will learn how to configure workload identity, network policy in AKS and Azure KeyVault.
